@@ -1,7 +1,7 @@
 <?php
 
 	include 'core/init.php';
-	
+	include 'Templates/overall_footer_Header/header.php';
 	// echo $_SERVER['DOCUMENT_ROOT'] ;
 
 
@@ -13,31 +13,35 @@
 
 		// echo $username . "/" . $password;
 
-		if((empty($username) == true ) || (empty($password) == true))
+		if((empty($username) === true ) || (empty($password) === true))
 		{
-			echo 'You Need to Enter Username AND Password !';
+			$errors[] = 'You Need to Enter Username AND Password !';
 		}
-		else if (user_exists($connect,$username) == false) {
-			echo "We can't find that username !";
+		else if (user_exists($connect,$username) === false) {
+			$errors[] =  "We can't find that username !";
 		}
-		else if (user_exists($connect,$username) == true) {
-			echo "<br>"."Welcome ". $username;
+		else if(user_active($connect,$username) === false)
+		{
+			$errors[] = "You haven't activated your account !";
 		}
 		else
 		{
-			$login = login($username,$password);
-			if($login == false)
+			$login = login($connect,$username,$password);
+			if($login === false)
 			{
-				echo "That username/password combination is incorrect !";
+				$errors[] = "That username/password combination is incorrect !";
 			}
 			else 
 			{
-					
+				$_SESSION['user_id'] = $login;
+				header('Location: index.php');
+				exit();
 			}
 			
 		}
 		
-		
+		print_r ($errors);
 	}
 
+		include 'Templates/overall_footer_Header/footer.php';
 ?>

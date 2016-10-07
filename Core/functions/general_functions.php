@@ -1,7 +1,7 @@
 <?php 
 
-	function sanitize($data){
-		return mysqli_real_escape_string($data);
+	function sanitize($connect,$data){
+		return mysqli_real_escape_string($connect,$data);
 	}
 
 ?>
