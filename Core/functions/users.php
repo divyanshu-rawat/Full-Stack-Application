@@ -17,11 +17,7 @@
 	{
 		$query = mysqli_query($connect," SELECT * FROM users WHERE username = '$username' AND active = 1");
 		$number_of_rows = mysqli_num_rows($query);
-		
-		if($number_of_rows)
-			return true;
-		else 
-			return false;
+		return ($number_of_rows == 1) ? true:false;
 
 	}
 
