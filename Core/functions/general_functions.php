@@ -4,4 +4,20 @@
 		return mysqli_real_escape_string($connect,$data);
 	}
 
+
+	function  output_errors($errors)
+	{
+		$output = array();
+
+		foreach ($errors as $error) {
+			$output[] = '<li>' . $error . '</li>';
+		}
+
+		return '<ul>' . implode('',$output) . '</ul>';
+	}
+
 ?>
+
+<!-- # Give us the tools to build the future we dream.
+# internet is  our largest shared resource .
+# the wb needed nurturing . -->

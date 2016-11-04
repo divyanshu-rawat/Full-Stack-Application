@@ -4,7 +4,9 @@
 	include 'Templates/overall_footer_Header/header.php';
 	// echo $_SERVER['DOCUMENT_ROOT'] ;
 
+?>
 
+<?php
 
 	if(empty($_POST) === false)
 	{
@@ -26,7 +28,14 @@
 		}
 		else
 		{
+			if(strlen($password) > 32)
+			{
+				$errors [] = "Password too long !";
+			}
+
+
 			$login = login($connect,$username,$password);
+
 			if($login === false)
 			{
 				$errors[] = "That username/password combination is incorrect !";
@@ -36,12 +45,29 @@
 				$_SESSION['user_id'] = $login;
 				header('Location: index.php');
 				exit();
-			}
-			
-		}
-		
-		print_r ($errors);
+			}	
+		}	
 	}
 
+	else
+	{
+			$errors []= 'No data Received !'; 
+	}
+
+?>
+
+
+
+
+<?php
+	if(!empty($errors) === true){
+
+?>
+	<p>We tried to Log you in , but ....</p>
+
+<?php 		
+		echo output_errors($errors);
+
+	}	
 		include 'Templates/overall_footer_Header/footer.php';
 ?>

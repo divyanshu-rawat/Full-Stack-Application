@@ -9,5 +9,5 @@ require 'functions/users.php';
 
 
 
-
+$errors = array();
 ?>
