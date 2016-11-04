@@ -4,7 +4,7 @@
 
 		if(logged_in() === true)
 		{
-			echo "Logged_in";
+			// echo "Logged_in";
 			include 'Templates/Widgets/loggedin.php';
 		}
 		else 
