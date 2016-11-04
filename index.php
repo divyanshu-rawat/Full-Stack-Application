@@ -5,9 +5,20 @@
         include 'Templates\Overall_footer_Header\header.php';
 
 
+        if(isset($_SESSION['user_id']))
+        {
+        	// echo 'Logged In';
+        }
+        else
+        {
+        	// echo "Not Logged In !!!";
+        }
+
+
 ?>
 
 
+		
             
             <h1>Home</h1>
             
