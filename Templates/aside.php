@@ -12,5 +12,6 @@
 			include 'Templates/Widgets/login.php';
 		}
 	
+		include 'Templates/Widgets/user_count.php';
 	?>
 </aside>

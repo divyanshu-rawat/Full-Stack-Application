@@ -4,6 +4,15 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+	function user_count($connect){
+
+		$query = mysqli_query($connect, "SELECT * FROM users WHERE active = 1");
+		$num_rows = mysqli_num_rows($query);
+		return $num_rows;
+
+	}
+
+
 
 	function user_data($connect,$user_id)
 	{
