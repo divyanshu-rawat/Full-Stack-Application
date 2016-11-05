@@ -52,8 +52,10 @@
 	function user_exists($connect,$username)
 	{
 		$username = sanitize($connect,$username);
+		// echo $username;
 		$query = mysqli_query($connect," SELECT * FROM users WHERE username = '$username'");
 		$number_of_rows = mysqli_num_rows($query);
+		// echo $number_of_rows;
 		return ($number_of_rows == 1) ? true:false; 
 	}
 
