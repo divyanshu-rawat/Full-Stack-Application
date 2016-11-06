@@ -59,6 +59,16 @@
 		return ($number_of_rows == 1) ? true:false; 
 	}
 
+	function email_exists($connect,$email)
+	{
+		$email = sanitize($connect,$email);
+		// echo $username;
+		$query = mysqli_query($connect," SELECT * FROM users WHERE email = '$email'");
+		$number_of_rows = mysqli_num_rows($query);
+		// echo $number_of_rows;
+		return ($number_of_rows == 1) ? true:false; 
+	}
+
 	function user_active($connect,$username)
 	{
 		$username = sanitize($connect,$username);

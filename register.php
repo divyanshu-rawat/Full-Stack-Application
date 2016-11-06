@@ -39,16 +39,38 @@
 				$errors [] = "Your password do not match !";
 			}
 
+			if(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL) == false)
+			{
+				$errors [] = "A valid email address is required !!";
+			}
+			if(email_exists($connect,$_POST['email']) == true)
+			{
+				$errors [] = 'Sorry , the email \' '.htmlentities($_POST['email']) . '\' is already in use  . ';
+			}
+
 	}
 
-	print_r($errors);
+	// print_r($errors);
 
 
 ?>
 
 
 
+
             <h1>Register</h1>
+
+<?php
+
+	if(empty($_POST) === true && empty($errors) === true)
+	{
+
+	}
+	else {
+		echo output_errors($errors);
+	}
+
+?>
             
 <form action="" method="post">
 			
