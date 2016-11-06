@@ -19,20 +19,42 @@
 
         if(md5($_POST['current_password']) == $user_data['password'])
         {
-            echo 'fine';
+            if(trim($_POST['password']) != trim($_POST['password_again']))
+                {
+                    $errors [] = "Your new passwords do not match !!!";
+                }
+                else if(strlen($_POST['password']) < 6)
+                {
+                    $errors [] = 'Your password must be at least 6 characters long !';
+                }
+
         }
         else
         {
             $errors [] = "Your Current Password is incorrect !!";
         }
 
-        print_r($errors);
+        
 
     }
         include 'Templates\Overall_footer_Header\header.php';
 
 
 ?>
+<?php
+
+        if(empty($_POST) === false && empty($errors) === true)
+        {
+            echo 'ok!';
+        }
+        else if(empty($errors) === false)
+        {   
+            echo output_errors($errors);
+        }
+?>
+
+
+
             <h1>Change Password </h1>
         <form action="" method="POST">
             <ul>
