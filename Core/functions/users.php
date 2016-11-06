@@ -4,6 +4,25 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+
+
+	function register_user($connect,$data){
+
+		$sanitize_array = array_sanitize($connect,$data);
+		$sanitize_array['password'] = md5($sanitize_array['password']);
+		// print_r($sanitize_array);
+
+		$fields = '`'.implode('`,`',array_keys($sanitize_array)). '`';
+		$data =  '\''.implode('\',\'',$sanitize_array). '\'';
+		
+		$query  = mysqli_query($connect,"INSERT INTO `users` ($fields) VALUES ($data)") or die (mysqli_error($connect));
+
+	}
+
+
+
+
+
 	function user_count($connect){
 
 		$query = mysqli_query($connect, "SELECT * FROM users WHERE active = 1");

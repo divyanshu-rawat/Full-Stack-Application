@@ -1,5 +1,16 @@
 <?php 
 
+
+	function  array_sanitize($connect,$data)
+	{
+		foreach ($data as $key => $value) {
+ 		{
+ 			mysqli_real_escape_string($connect,$data[$key]);
+ 		}
+
+ 		return $data;
+	}
+	}
 	function sanitize($connect,$data){
 		return mysqli_real_escape_string($connect,$data);
 	}
@@ -15,6 +26,8 @@
 
 		return '<ul>' . implode('',$output) . '</ul>';
 	}
+
+
 
 ?>
 
