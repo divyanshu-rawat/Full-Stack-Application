@@ -25,6 +25,20 @@
 				$errors [] = 'Sorry , the username \' '.htmlentities($_POST['username']) . '\' is already taken . ';
 			}
 
+			if (preg_match("/\\s/",$_POST['username']) == true) {
+				$errors [] = "Your username must not contain spaces !";
+			}
+
+			if(strlen($_POST['password']) < 6)
+			{
+				$errors [] = "Your password must be atleast 5 characters long !";
+			}
+
+			if($_POST['password'] !== $_POST['password_again'])
+			{
+				$errors [] = "Your password do not match !";
+			}
+
 	}
 
 	print_r($errors);
