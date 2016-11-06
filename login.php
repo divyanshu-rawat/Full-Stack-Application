@@ -1,6 +1,9 @@
 <?php
 
 	include 'core/init.php';
+	
+	logged_in_redirect();
+
 	include 'Templates/overall_footer_Header/header.php';
 	// echo $_SERVER['DOCUMENT_ROOT'] ;
 

@@ -1,6 +1,13 @@
 
 
-<?php include 'core\init.php';?>
+<?php include 'core\init.php';
+
+
+	logged_in_redirect();
+?>
+
+
+
 <?php include 'Templates\Overall_footer_Header\header.php';
 
 	if(empty($_POST) === false)
