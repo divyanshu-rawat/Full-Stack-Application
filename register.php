@@ -62,26 +62,38 @@
 
 <?php
 
-	if(empty($_POST) === false && empty($errors) === true)
-	{	
-		$register_data = array(
-			'username'  => $_POST['username'],
-			'password'  => $_POST['password'],
-			'first_name' => $_POST['first_name'],
-			'last_name'  => $_POST['last_name'],
-			'Email'     => $_POST['email'],
-
-			);
-
-		register_user($connect,$register_data);
-		exit();
-
-
-	}
-	else if(empty($errors) === false){
-		echo output_errors($errors);
+	if(isset($_GET['success']))
+	{
+		echo "You have been registed successfully !!";
 	}
 
+	else
+	{
+		if(empty($_POST) === false && empty($errors) === true)
+			{	
+				$register_data = array(
+					'username'  => $_POST['username'],
+					'password'  => $_POST['password'],
+					'first_name' => $_POST['first_name'],
+					'last_name'  => $_POST['last_name'],
+					'Email'     => $_POST['email'],
+
+					);
+
+				register_user($connect,$register_data);
+				header('Location: register.php?success');
+				exit();
+
+
+			}
+			else if(empty($errors) === false){
+				echo output_errors($errors);
+			}
+		
+	
+
+
+	
 ?>
             
 <form action="" method="post">
@@ -124,5 +136,6 @@
 </ul>
 
 </form>
-        
+  
+ <?php } ?>      
 <?php include 'Templates\Overall_footer_Header\footer.php';?>
