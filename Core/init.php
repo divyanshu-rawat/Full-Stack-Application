@@ -11,6 +11,10 @@ require 'functions/users.php';
 
 $errors = array();
 
+
+
+
+
 if(logged_in() === true)
 {
 	$session_user_id = $_SESSION['user_id'];

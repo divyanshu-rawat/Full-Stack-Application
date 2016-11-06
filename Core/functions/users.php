@@ -5,6 +5,14 @@
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
 
+	function change_password($connect,$user_id,$password)
+	{
+		$user_id = (int) $user_id;
+		$password = md5($password);
+
+		mysqli_query($connect,"UPDATE users SET password = '$password' WHERE user_id = '$user_id'");
+	}
+
 
 	function register_user($connect,$data){
 

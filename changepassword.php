@@ -43,9 +43,17 @@
 ?>
 <?php
 
+if(isset($_GET['success'])){
+    
+    echo "Your password has been changed !!";    
+}
+
+else
+{
         if(empty($_POST) === false && empty($errors) === true)
         {
-            echo 'ok!';
+            change_password($connect,$session_user_id,$_POST['password']);
+            header('Location: changepassword.php?success');
         }
         else if(empty($errors) === false)
         {   
@@ -60,15 +68,15 @@
             <ul>
                     <li>
                         Current password*:<br>
-                        <input type="text" name="current_password">
+                        <input type="password" name="current_password">
                     </li>
                     <li>
                         New Password*:<br>
-                        <input type="text" name="password">
+                        <input type="password" name="password">
                     </li>
                     <li>
                         New Password again*:<br>
-                        <input type="text" name="password_again">
+                        <input type="password" name="password_again">
                     </li>
                     <li>
                         <input type="submit" value="change password">
@@ -79,6 +87,9 @@
 
         </form>
    
+
+<?php }; ?>
+
 <?php 
 	
     	include 'Templates\Overall_footer_Header\footer.php';
