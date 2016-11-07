@@ -11,9 +11,9 @@
 
 		
             
-            <h1>Downloads</h1>
+            <h4>Downloads</h4>
             
-            <p>Just a template.</p>
+            <p>Just A Template.</p>
    
 <?php 
 	

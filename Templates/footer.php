@@ -1,4 +1,7 @@
- <footer>
-            Copyright &copy; <a href="https://www.codecourse.com">Codecourse</a> <?php echo date('Y') ?>,
-            formerly phpacademy.org. All rights reserved.
+ <footer class="row-footer" >
+ 		<div class="container">
+ 			<div class="row" style="padding:12px;">
+                <p align="center" style="color:grey">© Copyright 2015 Divyanshu Rawat</p>
+            </div>
+         </div>
 </footer>

@@ -1,31 +1,19 @@
-<div class="widget">
 
-	    <h2>Login/Register</h2>
-	    <div class="inner">
-	        <form action="login.php" method="POST">
-	        	
-	        	<ul id = "login">
-	        		<li>
-	        			username:<br>
-	        			<input type="text" name="username">
-	        		</li>
-	        		<li>
-	        			password:<br>
-	        			<input type="password" name="password">
-	        		</li>
-	        		<li>
-	        			<input type="submit" value="Log in">
+<div class="pull-right">
+	<h3 style="">Login/Register</h3>
 
-	        		</li>
-	        		<li>
-	        			<a href="register.php">Register</a>
-
-	        		</li>
-
-	        	</ul>
-
-
-	        </form>
-	    </div>
-
-</div>
+	<form action="login.php" method="POST" >
+	  <div class="form-group">
+	    <label for="username">username:</label>
+	    <input type="text" class="form-control" name="username">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Password:</label>
+	    <input type="password" class="form-control" name="password">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Log in</button>
+	  <br>
+	  <br>
+	  <a class = "btn btn-primary" href="register.php">Register</a>
+	</form>
+	</div>

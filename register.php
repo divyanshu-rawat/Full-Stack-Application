@@ -65,7 +65,7 @@
 
 
 
-            <h1>Register</h1>
+           
 
 <?php
 
@@ -102,47 +102,38 @@
 
 	
 ?>
-            
+ 
+<div class  = "container col-lg-6" >
+ <h3>Register</h3>
+
 <form action="" method="post">
-			
-<ul>
-	
-	<li>
-		username*:<br>
-		<input type="text" name="username">
-	</li>
-
-	<li>
-		Password*<br>
-		<input type="password" name="password">
-	</li>
-
-	<li>
-		Password again*<br>
-		<input type="password" name="password_again">
-	</li>
-
-	<li>
-		First Name*<br>
-		<input type="text" name="first_name">
-	</li>
-
-	<li>
-		Last Name*<br>
-		<input type="text" name="last_name">
-	</li>
-
-	<li>
-		Email*<br>
-		<input type="text" name="email">
-	</li>
-
-	<li>
-		<input type="submit" value="register">
-	</li>
-</ul>
-
-</form>
+	  <div class="form-group">
+	    <label for="username">username*</label>
+	    <input type="text" class="form-control" name="username">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Password*</label>
+	    <input type="password" class="form-control" name="password">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Password again*</label>
+	    <input type="password" class="form-control" name="password_again">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">First Name*</label>
+	    <input type="text" class="form-control" name="first_name">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Last Name*</label>
+	    <input type="text" class="form-control" name="last_name">
+	  </div>
+	  <div class="form-group">
+	    <label for="pwd">Email*</label>
+	    <input type="email" class="form-control" name="email">
+	  </div>
+	  <button type="submit" class="btn btn-primary">Register</button>
+	</form>
   
+ </div>
  <?php } ?>      
 <?php include 'Templates\Overall_footer_Header\footer.php';?>

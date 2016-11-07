@@ -9,7 +9,7 @@
 		if(isset($_GET['success']) === true )
 		{
 ?>
-				<h2>Thanks, we have activated your ccount !!!</h2>
+				<h4>Thanks, we have activated your account !!!</h4>
 				<p>And you can Login Now !!</p>
 <?php 
 		}

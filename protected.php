@@ -9,9 +9,9 @@
 
 		
             
-            <h1>Sorry,You need to be logged in to do that !!</h1>
+            <h5>Sorry, You Need To Be Logged In To Do That !!</h5>
             
-            <p>Please register or login !!</p>
+            <p>Please Register Or Login !!</p>
    
 <?php 
 	

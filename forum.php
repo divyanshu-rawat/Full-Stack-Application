@@ -12,9 +12,9 @@
 
 		
             
-            <h1>Forum</h1>
+            <h4>Forum</h4>
             
-            <p>Just a template.</p>
+            <p>Just A Template.</p>
    
 <?php 
 	

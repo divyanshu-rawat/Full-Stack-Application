@@ -20,14 +20,14 @@
 
 		if((empty($username) === true ) || (empty($password) === true))
 		{
-			$errors[] = 'You Need to Enter Username AND Password !';
+			$errors[] = 'You need to enter Username and Password !';
 		}
 		else if (user_exists($connect,$username) === false) {
 			$errors[] =  "We can't find that username !";
 		}
 		else if(user_active($connect,$username) === false)
 		{
-			$errors[] = "You haven't activated your account !";
+			$errors[] = "You haven't Activated your Account !";
 		}
 		else
 		{

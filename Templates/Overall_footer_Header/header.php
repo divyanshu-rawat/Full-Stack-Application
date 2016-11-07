@@ -5,5 +5,5 @@
 
             <?php include 'Templates/header.php';?>
 
-        <div id="container">
+        <div class="container" >
             <?php include 'Templates/aside.php';?>

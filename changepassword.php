@@ -60,33 +60,29 @@ else
             echo output_errors($errors);
         }
 ?>
+<div class = "container col-lg-6" style = "margin:0px;padding:0px;">
+    <form action="" method="POST" >
 
+      <div class="form-group">
+        <label for="username">Current password *:</label>
+        <input type="text" class="form-control" name="current_password">
+      </div>
 
+      <div class="form-group">
+        <label for="pwd">New Password *:</label>
+        <input type="password" class="form-control" name="password">
+      </div>
 
-            <h1>Change Password </h1>
-        <form action="" method="POST">
-            <ul>
-                    <li>
-                        Current password*:<br>
-                        <input type="password" name="current_password">
-                    </li>
-                    <li>
-                        New Password*:<br>
-                        <input type="password" name="password">
-                    </li>
-                    <li>
-                        New Password again*:<br>
-                        <input type="password" name="password_again">
-                    </li>
-                    <li>
-                        <input type="submit" value="change password">
-                    </li>
+       <div class="form-group">
+        <label for="pwd">New Password again *:</label>
+        <input type="password" class="form-control" name="password_again">
+      </div>
 
-            </ul>
+      <button type="submit" class="btn btn-primary">Change Password</button>
+      
+    </form>
 
-
-        </form>
-   
+   </div>
 
 <?php }; ?>
 

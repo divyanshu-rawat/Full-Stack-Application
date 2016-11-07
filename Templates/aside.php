@@ -1,5 +1,6 @@
 
-<aside id="Just_A_Random_ID">
+
+	<div class="row">
 	<?php 
 
 		if(logged_in() === true)
@@ -14,4 +15,4 @@
 	
 		include 'Templates/Widgets/user_count.php';
 	?>
-</aside>
+	</div>

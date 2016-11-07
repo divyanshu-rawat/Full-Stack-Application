@@ -20,9 +20,9 @@
 
 		
             
-            <h1>Contact</h1>
+            <h4>Contact</h4>
             
-            <p>Just a template.</p>
+            <p>Just A Template.</p>
    
 <?php 
 	

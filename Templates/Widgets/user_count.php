@@ -1,12 +1,12 @@
-<div class="widget">
 
-	<h2>Users</h2>
 
-	<div class="inner">
+
+
+	<div class="container">
+			<h4>Our Users !</h4>
 	<?php
 		$user_count = user_count($connect);
 		$suffix = ($user_count !== 1) ? 's':'';
 	?>
-		we current,have <?php echo $user_count; ?> registered user<?php echo $suffix?>.
+		<p>We Currently Have <?php echo $user_count; ?> Registered User<?php echo $suffix?>.</p>
 	</div>
-</div>

@@ -5,24 +5,13 @@
         include 'Templates\Overall_footer_Header\header.php';
 
 
-        if(isset($_SESSION['user_id']))
-        {
-        	// echo 'Logged In';
-        }
-        else
-        {
-        	// echo "Not Logged In !!!";
-        }
-
-
 ?>
-
-
-		
+		<div>
+            <h4>Home</h4>
             
-            <h1>Home</h1>
-            
-            <p>Just a template.</p>
+            <p>Just A template.</p>
+
+        </div>
    
 <?php 
 	
