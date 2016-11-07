@@ -71,7 +71,7 @@
 
 	if(isset($_GET['success']))
 	{
-		echo "You have been registed successfully !!";
+		echo "You have been registed successfully !! Please check your email to activate !!!";
 	}
 # save this version in git !!!!
 	else
@@ -84,7 +84,7 @@
 					'first_name' => $_POST['first_name'],
 					'last_name'  => $_POST['last_name'],
 					'Email'     => $_POST['email'],
-
+					'Email_Code' => md5($_POST['username'] + microtime())
 					);
 
 				register_user($connect,$register_data);

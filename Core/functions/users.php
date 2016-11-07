@@ -4,6 +4,18 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+	function email($connect,$to,$subject,$body){
+
+		// tp://www.toolheap.com/test-mail-server-tool/
+		//  best tool eer used this to configure wamp to swnd mail's
+
+		mail($to,$subject,$body,'From:divyanshu.r46956@gmail.com');
+
+
+
+	}
+
+
 
 	function change_password($connect,$user_id,$password)
 	{
@@ -24,6 +36,9 @@
 		$data =  '\''.implode('\',\'',$sanitize_array). '\'';
 		
 		$query  = mysqli_query($connect,"INSERT INTO `users` ($fields) VALUES ($data)") or die (mysqli_error($connect));
+
+
+		email($connect,$sanitize_array['Email'],'Activate your Account',"Hello " . $sanitize_array['first_name'] . ",\nYou Need to Activate your account , so use the link below:\nhttp://localhost/LogInOut_System_Php/activate.php?email = ".$sanitize_array['Email'] . "&email_code = " . $sanitize_array['Email_Code'] ."\n\nRegards anonymous@test.com");
 
 	}
 
