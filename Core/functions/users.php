@@ -4,6 +4,35 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+
+	function activate($connect,$email,$email_code){
+
+		$email = mysqli_real_escape_string($connect,$email);
+		$email_code = mysqli_real_escape_string($connect,$email_code);
+
+		// echo $email .'<br>';
+		// echo $email_code;
+		$query = mysqli_query($connect, "SELECT * FROM users WHERE Email = '$email' AND Email_code = '$email_code' AND active = 0");
+		
+		if(mysqli_num_rows($query) == 1)
+		{
+			// return true;
+			// echo 'true';
+			mysqli_query($connect,"UPDATE users SET active = 1 WHERE Email = '$email'");
+			return true;
+
+
+		}
+		else
+		{
+			return false;
+			// echo 'false';
+		}
+
+	}
+
+
+
 	function email($connect,$to,$subject,$body){
 
 		// tp://www.toolheap.com/test-mail-server-tool/
@@ -38,7 +67,7 @@
 		$query  = mysqli_query($connect,"INSERT INTO `users` ($fields) VALUES ($data)") or die (mysqli_error($connect));
 
 
-		email($connect,$sanitize_array['Email'],'Activate your Account',"Hello " . $sanitize_array['first_name'] . ",\nYou Need to Activate your account , so use the link below:\nhttp://localhost/LogInOut_System_Php/activate.php?email = ".$sanitize_array['Email'] . "&email_code = " . $sanitize_array['Email_Code'] ."\n\nRegards anonymous@test.com");
+		email($connect,$sanitize_array['Email'],'Activate your Account',"Hello " . $sanitize_array['first_name'] . ",\nYou Need to Activate your account , so use the link below:\nhttp://localhost/LogInOut_System_Php/activate.php?email=".$sanitize_array['Email']."&email_code=".$sanitize_array['Email_Code']."\n\nRegards anonymous@test.com");
 
 	}
 
