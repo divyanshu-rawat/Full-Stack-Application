@@ -49,5 +49,5 @@
     	// print_r($errors);
 
 
-    	include 'Templates\Overall_footer_Header\footer.php';
+    	// include 'Templates\Overall_footer_Header\footer.php';
 ?>

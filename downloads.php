@@ -17,7 +17,7 @@
    
 <?php 
 	
-    	include 'Templates\Overall_footer_Header\footer.php';
+    	// include 'Templates\Overall_footer_Header\footer.php';
 
 
 ?>

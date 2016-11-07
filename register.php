@@ -136,4 +136,6 @@
   
  </div>
  <?php } ?>      
-<?php include 'Templates\Overall_footer_Header\footer.php';?>
+<?php 
+	// include 'Templates\Overall_footer_Header\footer.php';
+?>

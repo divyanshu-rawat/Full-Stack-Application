@@ -65,7 +65,7 @@ else
 
       <div class="form-group">
         <label for="username">Current password *:</label>
-        <input type="text" class="form-control" name="current_password">
+        <input type="password" class="form-control" name="current_password">
       </div>
 
       <div class="form-group">
@@ -88,7 +88,7 @@ else
 
 <?php 
 	
-    	include 'Templates\Overall_footer_Header\footer.php';
+    	// include 'Templates\Overall_footer_Header\footer.php';
 
 
 ?>

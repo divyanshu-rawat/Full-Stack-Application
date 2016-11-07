@@ -72,5 +72,5 @@
 		echo output_errors($errors);
 
 	}	
-		include 'Templates/overall_footer_Header/footer.php';
+		// include 'Templates/overall_footer_Header/footer.php';
 ?>
