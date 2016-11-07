@@ -73,7 +73,7 @@
 	{
 		echo "You have been registed successfully !!";
 	}
-
+# save this version in git !!!!
 	else
 	{
 		if(empty($_POST) === false && empty($errors) === true)
