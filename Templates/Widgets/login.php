@@ -13,12 +13,11 @@
 	  </div>
 	  <button type="submit" class="btn btn-primary">Log in</button>
 	  <br>
+	  <a class = "btn btn-primary" href="register.php" style="margin-top:5px;">Register</a>
 	  <br>
-	  <a class = "btn btn-primary" href="register.php">Register</a>
-	  <br><br>
-	  <a class = "btn btn-success" href="recover.php?mode=username">Forgot Username</a>
-	  <br><br>
-	  <a class = "btn btn-success" href="recover.php?mode=password">Forgot password</a>
+	  <a class = "btn btn-success" href="recover.php?mode=username" style="margin-top:5px;">Forgot Username</a>
+	  <br>
+	  <a class = "btn btn-success" href="recover.php?mode=password" style="margin-top:5px;">Forgot password</a>
 
 	</form>
 	</div>

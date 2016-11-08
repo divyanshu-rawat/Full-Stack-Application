@@ -4,6 +4,22 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+	function recover($connect,$mode,$email)
+	{
+		$mode = sanitize($connect,$mode);
+		$email = sanitize($connect,$email);
+		$user_data = user_data($connect,user_id_from_email($connect,$email),'first_name','username');
+
+		if($mode == 'username'){
+			email($connect,$email,'Your Username ',"Hello " . $user_data['first_name'] . "\nYour username is: " .$user_data['username'] . "\nRegards anonymous@test.com");
+		}
+		else if($mode == 'password'){
+				//recover password !
+			}
+
+
+	}
+
 	function update_user_info($connect,$data){
 
 		$update = array();
@@ -178,6 +194,15 @@
 		$q_result = mysqli_fetch_assoc($query);
 		return $q_result['user_id'];
 	}
+
+	function  user_id_from_email($connect,$email)
+	{
+		$username = sanitize($connect,$email);
+		$query    = mysqli_query($connect,"SELECT user_id FROM users WHERE Email = '$email'");
+		$q_result = mysqli_fetch_assoc($query);
+		return $q_result['user_id'];
+	}
+
 
 
 	function login($connect,$username,$password)
