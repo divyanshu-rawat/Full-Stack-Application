@@ -15,5 +15,10 @@
 	  <br>
 	  <br>
 	  <a class = "btn btn-primary" href="register.php">Register</a>
+	  <br><br>
+	  <a class = "btn btn-success" href="recover.php?mode=username">Forgot Username</a>
+	  <br><br>
+	  <a class = "btn btn-success" href="recover.php?mode=password">Forgot password</a>
+
 	</form>
 	</div>
