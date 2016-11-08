@@ -14,7 +14,8 @@
 			email($connect,$email,'Your Username ',"Hello " . $user_data['first_name'] . "\nYour username is: " .$user_data['username'] . "\nRegards anonymous@test.com");
 		}
 		else if($mode == 'password'){
-				//recover password !
+				$generated_password = substr(md5(rand(999, 999999)),0,8);
+				die($generated_password);
 			}
 
 
