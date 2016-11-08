@@ -8,14 +8,20 @@
 	{
 		$mode = sanitize($connect,$mode);
 		$email = sanitize($connect,$email);
-		$user_data = user_data($connect,user_id_from_email($connect,$email),'first_name','username');
+		$user_data = user_data($connect,user_id_from_email($connect,$email),'user_id','first_name','username');
 
 		if($mode == 'username'){
 			email($connect,$email,'Your Username ',"Hello " . $user_data['first_name'] . "\nYour username is: " .$user_data['username'] . "\nRegards anonymous@test.com");
 		}
 		else if($mode == 'password'){
 				$generated_password = substr(md5(rand(999, 999999)),0,8);
-				die($generated_password);
+				// die($generated_password);
+
+				change_password($connect,$user_data['user_id'],$generated_password);
+
+				email($connect,$email,'Your Password ',"Hello " . $user_data['first_name'] . "\nYour new password is: " . $generated_password . "\nRegards anonymous@test.com");
+
+
 			}
 
 
