@@ -4,6 +4,28 @@
 	// echo $_SERVER['DOCUMENT_ROOT'];
  	// include $_SERVER['DOCUMENT_ROOT'] . 'LogInOut_System_Php/core/database/connect.php';
 
+	function update_user_info($connect,$data){
+
+		$update = array();
+		$sanitize_array = array_sanitize($connect,$data);
+		// print_r($sanitize_array);
+
+		foreach ($sanitize_array as $field=>$data)
+		{
+			$update [] = $field . ' = \'' . $data . '\'';
+		}
+
+		 $implode = implode(', ', $update);
+		 // echo "SELECT users SET ". $implode . " WHERE user_id  = $_SESSION[user_id]";
+		$query  = mysqli_query($connect,"UPDATE users SET ". $implode ." WHERE user_id  = $_SESSION[user_id]") or die (mysqli_error($connect));
+
+
+		
+	}
+
+
+
+
 
 	function activate($connect,$email,$email_code){
 

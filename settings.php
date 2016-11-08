@@ -45,37 +45,55 @@
 
 <?php
 
-  if(empty($_POST) === false && empty($errors) === true)
-  {
+if(isset($_GET['success']) === true )
+{
+  echo "Your details get updated !!";
+}
+else
+{
+      
+    if(empty($_POST) === false && empty($errors) === true)
+      {
+          $Update_data = array(
+            'first_name' => $_POST['first_name'],
+            'last_name'  => $_POST['last_name'],
+            'email'      => $_POST['email'],
 
-    
-  }
+            );
 
-  else if( empty($errors) === false)
-  {
-       echo output_errors($errors);
-  }
+          update_user_info($connect,$Update_data);
+          header('Location:settings.php?success');
+          exit();
+        
+      }
 
-?>
+      else if( empty($errors) === false)
+      {
+           echo output_errors($errors);
+      }
 
-<form action="" method="POST" >
-      <div class="form-group">
-        <label for="username">First Name *:</label>
-        <input type="text" class="form-control" name="first_name" value="<?php echo $user_data['first_name'];?>">
-      </div>
+    ?>
 
-      <div class="form-group">
-        <label for="last_name">Last Name:</label>
-        <input type="text" class="form-control" name="last_name" value="<?php echo $user_data['last_name'];?>">
-      </div>
+    <form action="" method="POST" >
+          <div class="form-group">
+            <label for="username">First Name *:</label>
+            <input type="text" class="form-control" name="first_name" value="<?php echo $user_data['first_name'];?>">
+          </div>
 
-      <div class="form-group">
-        <label for="email">Email *:</label>
-        <input type="text" class="form-control" name="email" value="<?php echo $user_data['Email'];?>">
-      </div>
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" class="form-control" name="last_name" value="<?php echo $user_data['last_name'];?>">
+          </div>
 
-      <button type="submit" class="btn btn-primary">Update</button>
-      <br>
-      <br>
+          <div class="form-group">
+            <label for="email">Email *:</label>
+            <input type="text" class="form-control" name="email" value="<?php echo $user_data['Email'];?>">
+          </div>
 
-    </form>
+          <button type="submit" class="btn btn-primary">Update</button>
+          <br>
+          <br>
+
+        </form>
+
+<?php };?>
