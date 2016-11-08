@@ -108,27 +108,27 @@
 
 <form action="" method="post">
 	  <div class="form-group">
-	    <label for="username">username*</label>
+	    <label for="username">username *:</label>
 	    <input type="text" class="form-control" name="username">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">Password*</label>
+	    <label for="pwd">Password *:</label>
 	    <input type="password" class="form-control" name="password">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">Password again*</label>
+	    <label for="pwd">Password again *:</label>
 	    <input type="password" class="form-control" name="password_again">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">First Name*</label>
+	    <label for="pwd">First Name *:</label>
 	    <input type="text" class="form-control" name="first_name">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">Last Name*</label>
+	    <label for="pwd">Last Name *:</label>
 	    <input type="text" class="form-control" name="last_name">
 	  </div>
 	  <div class="form-group">
-	    <label for="pwd">Email*</label>
+	    <label for="pwd">Email *:</label>
 	    <input type="email" class="form-control" name="email">
 	  </div>
 	  <button type="submit" class="btn btn-primary">Register</button>

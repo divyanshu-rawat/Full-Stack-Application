@@ -60,7 +60,9 @@ else
             echo output_errors($errors);
         }
 ?>
+
 <div class = "container col-lg-6" style = "margin:0px;padding:0px;">
+    <h4>Change Password</h4>
     <form action="" method="POST" >
 
       <div class="form-group">
