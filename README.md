@@ -1,6 +1,14 @@
-> :+1: Full_Stack_Application
+> :+1: Full_Stack_Application :exclamation: :exclamation:
+
+### Description 
+
+* A User Management, Session Management System 
+* System supports User Registration functionality,User LogIn/LogOut functionality.
+* Forgot Password , Forgot Username functionality , Change Password functionality , User settings functionality.
+
 
 ### Package Manager Used 
+
 * Composer is an application-level package manager for the PHP programming language that provides a standard format for managing           dependencies of PHP software and required libraries.
 
 ### Dependencies
