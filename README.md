@@ -1,5 +1,20 @@
 > :+1: Full_Stack_Application
 
+### Package Manager Used 
+* Composer is an application-level package manager for the PHP programming language that provides a standard format for managing           dependencies of PHP software and required libraries.
+
+### Dependencies
+
+* {
+    "require": {
+        "twbs/bootstrap": "^3.3",
+        "components/jquery": "^3.1"
+    }
+  }
+
+
+
+
 ### Installation I like to use Wamp server, so I suggest installing Wamp server . Once that is installed, execute the following instructions.
 
 * Run wamp server :exclamation:.
