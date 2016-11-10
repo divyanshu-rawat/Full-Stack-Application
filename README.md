@@ -1,5 +1,11 @@
 > :+1: Full_Stack_Application :exclamation: :exclamation:
 
+### Important Notification
+
+* Most of the web projects have the email sending functionality. Before uploading to the live server email functionality need to be         checked on the local server. But PHP mail() function will not work at the localhost.
+* So overcome this problem I have used Test Mail Server Tool.
+* Download Link : [Test Mail Server Tool] (http://www.toolheap.com/test-mail-server-tool/)
+
 ### Description 
 
 * A User Management, Session Management System 
