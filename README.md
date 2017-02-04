@@ -33,9 +33,7 @@
         "twbs/bootstrap": "^3.3",
     
         "components/jquery": "^3.1"
-    
     }
-  
 }
 
 ##
@@ -79,39 +77,39 @@ Setting Up The Database (.SQL File is present in sql_database_file Folder)
 5. **_Enjoy!_**
 
 ##
-Examples
+### Examples
 
-### Front End
+##### Front End
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/front_end.png)
 
 ##
 
-### Logged In Page
+##### Logged In Page
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/logged_in.png)
 
 ##
 
-### User Register
+##### User Register
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/user_register.png)
 
 ##
 
-### User Settings 
+##### User Settings 
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/user_settings.png)
 
 ##
 
-### Change Password
+##### Change Password
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/change_password.png)
 
 ##
 
-### Forgot Password
+##### Forgot Password
 
 ![alt tag](https://github.com/divyanshu-rawat/Full_Stack_Application/blob/master/snap_shots/forgot_password.png)
 
